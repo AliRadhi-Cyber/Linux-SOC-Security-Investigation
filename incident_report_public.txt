@@ -1,0 +1,184 @@
+LINUX SOC SECURITY INVESTIGATION
+
+
+
+INCIDENT REPORT
+
+
+Incident ID: LINUX-001
+Date:November 26,2026
+Hostname: linux-lab-01
+Operating System: Ubuntu 24.04.5 LTS
+Environment: Oracle VirtualBox
+Incident Type: Authentication Failure
+Severity: Informational 
+Classification: Benign User Activity
+Status: Investigation Complete
+
+1.EXECUTIVE SUMMARY 
+
+A security investigation was conducted on an ubuntu Linux server running with Oracle VirtualBox
+
+
+The investigation included system patching, firewall hardening, network port enumeration, SSH service inspection, and authentication log analysis
+One failed local login attempt was attributed to an incorrect username during authorized user activity; two successful local login sessions were also identified.
+Authentication evidence was collected and preserved using SHA-256 hashing 
+
+
+No milicious activity was identified within the investigated authentication events
+
+2. SYSTEM SECURITY CONFIGURATION
+
+
+Hostname: linux-lab-01
+Operating System :Ubuntu 24.04.5 LTS
+IPv4 Address: 192.0.2.10
+
+System update were intalled successfully.
+
+Firewall configuration:
+
+*UFW status:Active
+*Incoming Traffic: Denied by default
+*Outgoing Traffic: Allowed by default
+*Firewall logging: Enabled (low)
+
+Network Port Enumeration:
+*Port 22: SSH
+*Port 53: DNS
+*Port 68: DHCP client
+
+SSH socket ativation was identified and verified using systemctl.
+
+The system was hardened through security updates and firewall configuration
+
+
+
+
+3. AUTHENTICATION INVESTIGATION
+
+Authentication logs were examined using /var/log/auth.log.
+
+Investigation Results:
+*Failed local login attempts: 1
+*Successful local login sessions: 2
+*Terminal: /dev/tty1
+*Failed login username: UNKNOWN
+*Successful login username: lab-user
+
+Initial keyword searches included sudo command records that contained the search terms.
+
+Regular expressions were used to exclude unrelated command records and accurately identify authentication events.
+
+No evidence of a brute-force attack or unauthorized access was identified withing the reviewed events
+
+
+
+4. INCIDENT TIMELINE
+
+Date: November 26,2026
+Time Zone: UTC
+22:12:10 - Authentication Failure recorded.
+22:12:13 - Failed local login for UNKNOWN user.
+22:12:50 - Successfule login session opened for lab-user
+22:17:41 - System startup events recorded. 
+22:17:56 - Second successful login session opened for lab-user
+22:20:12 - UFW firewall enabled.
+22:46:40 - Authentication log copy command recorded.
+
+The reviewed authentication events were consistant with benign local user activity. No evidence if unauthorized access was identified
+
+
+5. EVIDENCE COLLECTION AND PRESERVATION
+
+Authentication evidence was collected from /var/log/auth.log and copied into a dedicated SOC evidence directory.
+
+Evidence directory: /home/lab-user/SOC-Evidence/
+
+Evidence files:
+- auth_evidence.log
+- auth_hash.txt
+- incident_report.txt
+
+A SHA-256 hash was generated for the collected authentication log using the sha256sum utility.
+
+The hash was stored separately to support future evidence integrity verification.
+
+The original authentication log was retained, and a separate evidence copy was created for forensic analysis.
+
+
+
+
+6. TOOLS AND COMMANDS USED
+
+Operating System: Ubuntu 24.04.5 LTS
+Virtualization Platform: Oracle VirtualBox
+
+Security tools and Linux commands:
+
+- apt: System updates and security patching.
+- ufw: Firewall configuration and management.
+- ss: Network port and socket enumeration.
+- systemctl: Service and socket status verification.
+- grep: Authentication log filtering and analysis.
+- Regular expressions: Accurate authentication event identification.
+- tail: Reviewing recent log entries.
+- mkdir: Creating an evidence directory.
+- cp: Copying authentication evidence.
+- ls: Verifying evidence files.
+- sha256sum: Generating evidence integrity hashes.
+- cat: Displaying file contents.
+- nano: Incident report documentation.
+- ssh: Remote Linux server administration.
+- ssh-keygen: SSH host fingerprint verification.
+
+Windows PowerShell and VirtualBox NAT port forwarding were used to establish authenticated SSH access to the Linux server.
+
+
+
+7. FINDINGS AND RECOMMENDATIONS
+
+Findings:
+
+- One failed local login attempt was identified.
+- Two successful local login sessions were identified.
+- No evidence of brute-force activity or unauthorized access was identified within the reviewed authentication events.
+- The UFW firewall was enabled and configured to restrict incoming connections.
+- SSH access was restricted through a source-specific firewall rule and localhost NAT port forwarding.
+- Authentication evidence was collected and a SHA-256 integrity hash was generated.
+
+Recommendations:
+
+- Continue monitoring authentication logs for suspicious activity.
+- Investigate repeated failed login attempts.
+- Maintain regular operating system and security updates.
+- Implement SSH key-based authentication.
+- Disable SSH password authentication after key-based access is verified.
+- Regularly review firewall rules and listening network ports.
+- Verify the integrity of collected forensic evidence.
+- Implement centralized log monitoring using a SIEM platform.
+
+Incident classification: Benign User Activity
+Risk level: Low
+Escalation required: No
+
+
+
+8. FINAL CONCLUSION
+
+The Linux SOC security investigation was successfully conducted on the Ubuntu server linux-lab-01 within Oracle VirtualBox.
+
+The investigation demonstrated practical cybersecurity skills in Linux system administration, security hardening, firewall management, network port enumeration, authentication log analysis, incident triage, forensic evidence collection, and incident documentation.
+
+The reviewed authentication events were consistent with authorized local user activity. No evidence of brute-force activity or unauthorized access was identified within the reviewed events.
+
+Authentication evidence was preserved in a dedicated evidence directory, and a SHA-256 hash was generated to support evidence integrity verification.
+
+Final Classification: Benign User Activity
+Severity: Informational
+Escalation Required: No
+Incident Status: Closed
+
+END OF REPORT
+
+PUBLICATION NOTE: User, hostname and internal IP replaced with lab aliases and a documentation IP. Public evidence has a separate SHA-256 hash. Firewall and SSH configuration outcomes are reported lab observations, not independently verified by the authentication log alone.

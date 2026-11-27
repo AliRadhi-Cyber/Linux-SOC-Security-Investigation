@@ -1,0 +1,122 @@
+2026-11-26T22:10:37.896856+00:00 linux-lab-01 passwd[848]: password for 'lab-user' changed by 'root'
+2026-11-26T22:10:37.897510+00:00 linux-lab-01 systemd-logind[883]: New seat seat0.
+2026-11-26T22:10:37.897534+00:00 linux-lab-01 systemd-logind[883]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-11-26T22:10:37.897536+00:00 linux-lab-01 systemd-logind[883]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-11-26T22:10:37.897538+00:00 linux-lab-01 systemd-logind[883]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-11-26T22:10:37.897571+00:00 linux-lab-01 polkitd[872]: Loading rules from directory /etc/polkit-1/rules.d
+2026-11-26T22:10:37.897590+00:00 linux-lab-01 polkitd[872]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-11-26T22:10:37.897600+00:00 linux-lab-01 polkitd[872]: Finished loading, compiling and executing 6 rules
+2026-11-26T22:10:37.897602+00:00 linux-lab-01 polkitd[872]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-11-26T22:11:20.602072+00:00 linux-lab-01 agetty[971]: tty1: invalid character 0x1b in login name
+2026-11-26T22:12:02.975113+00:00 linux-lab-01 login[1123]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-11-26T22:12:02.975898+00:00 linux-lab-01 login[1123]: PAM adding faulty module: pam_lastlog.so
+2026-11-26T22:12:10.058120+00:00 linux-lab-01 login[1123]: pam_unix(login:auth): check pass; user unknown
+2026-11-26T22:12:10.058257+00:00 linux-lab-01 login[1123]: pam_unix(login:auth): authentication failure; logname=LOGIN uid=0 euid=0 tty=/dev/tty1 ruser= rhost= 
+2026-11-26T22:12:13.733014+00:00 linux-lab-01 login[1123]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+2026-11-26T22:12:50.854840+00:00 linux-lab-01 login[1123]: pam_unix(login:session): session opened for user lab-user(uid=1000) by LOGIN(uid=0)
+2026-11-26T22:12:50.887753+00:00 linux-lab-01 systemd-logind[883]: New session 1 of user lab-user.
+2026-11-26T22:12:50.996757+00:00 linux-lab-01 (systemd): pam_unix(systemd-user:session): session opened for user lab-user(uid=1000) by lab-user(uid=0)
+2026-11-26T22:15:01.961159+00:00 linux-lab-01 CRON[1281]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-26T22:15:01.984624+00:00 linux-lab-01 CRON[1281]: pam_unix(cron:session): session closed for user root
+2026-11-26T22:15:31.626156+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-26T22:15:31.633416+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:15:35.952580+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:16:22.358497+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/apt upgrade -y
+2026-11-26T22:16:22.359042+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:16:28.120055+00:00 linux-lab-01 polkitd[872]: Reloading rules
+2026-11-26T22:16:28.124892+00:00 linux-lab-01 polkitd[872]: Collecting garbage unconditionally...
+2026-11-26T22:16:28.125348+00:00 linux-lab-01 polkitd[872]: Loading rules from directory /etc/polkit-1/rules.d
+2026-11-26T22:16:28.125421+00:00 linux-lab-01 polkitd[872]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-11-26T22:16:28.130343+00:00 linux-lab-01 polkitd[872]: Finished loading, compiling and executing 6 rules
+2026-11-26T22:16:28.130923+00:00 linux-lab-01 polkitd[872]: Reloading rules
+2026-11-26T22:16:28.131266+00:00 linux-lab-01 polkitd[872]: Collecting garbage unconditionally...
+2026-11-26T22:16:28.131888+00:00 linux-lab-01 polkitd[872]: Loading rules from directory /etc/polkit-1/rules.d
+2026-11-26T22:16:28.132009+00:00 linux-lab-01 polkitd[872]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-11-26T22:16:28.134482+00:00 linux-lab-01 polkitd[872]: Finished loading, compiling and executing 6 rules
+2026-11-26T22:17:01.990670+00:00 linux-lab-01 CRON[6990]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-26T22:17:02.003511+00:00 linux-lab-01 CRON[6990]: pam_unix(cron:session): session closed for user root
+2026-11-26T22:17:07.729822+00:00 linux-lab-01 polkitd[9242]: Loading rules from directory /etc/polkit-1/rules.d
+2026-11-26T22:17:07.731478+00:00 linux-lab-01 polkitd[9242]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-11-26T22:17:07.738919+00:00 linux-lab-01 polkitd[9242]: Finished loading, compiling and executing 6 rules
+2026-11-26T22:17:07.742843+00:00 linux-lab-01 polkitd[9242]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-11-26T22:17:08.821698+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:17:40.062554+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/reboot
+2026-11-26T22:17:40.063768+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:17:40.070784+00:00 linux-lab-01 systemd-logind[883]: The system will reboot now!
+2026-11-26T22:17:40.083895+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:17:40.140279+00:00 linux-lab-01 systemd-logind[883]: System is rebooting.
+2026-11-26T22:17:41.847348+00:00 linux-lab-01 systemd-logind[699]: New seat seat0.
+2026-11-26T22:17:41.847351+00:00 linux-lab-01 systemd-logind[699]: Watching system buttons on /dev/input/event0 (Power Button)
+2026-11-26T22:17:41.847356+00:00 linux-lab-01 systemd-logind[699]: Watching system buttons on /dev/input/event1 (Sleep Button)
+2026-11-26T22:17:41.847358+00:00 linux-lab-01 systemd-logind[699]: Watching system buttons on /dev/input/event2 (AT Translated Set 2 keyboard)
+2026-11-26T22:17:41.847363+00:00 linux-lab-01 polkitd[693]: Loading rules from directory /etc/polkit-1/rules.d
+2026-11-26T22:17:41.847366+00:00 linux-lab-01 polkitd[693]: Loading rules from directory /usr/share/polkit-1/rules.d
+2026-11-26T22:17:41.847377+00:00 linux-lab-01 polkitd[693]: Finished loading, compiling and executing 6 rules
+2026-11-26T22:17:41.847379+00:00 linux-lab-01 polkitd[693]: Acquired the name org.freedesktop.PolicyKit1 on the system bus
+2026-11-26T22:17:51.758160+00:00 linux-lab-01 login[829]: PAM unable to dlopen(pam_lastlog.so): /usr/lib/security/pam_lastlog.so: cannot open shared object file: No such file or directory
+2026-11-26T22:17:51.758731+00:00 linux-lab-01 login[829]: PAM adding faulty module: pam_lastlog.so
+2026-11-26T22:17:56.657132+00:00 linux-lab-01 login[829]: pam_unix(login:session): session opened for user lab-user(uid=1000) by lab-user(uid=0)
+2026-11-26T22:17:56.696185+00:00 linux-lab-01 systemd-logind[699]: New session 1 of user lab-user.
+2026-11-26T22:17:56.716070+00:00 linux-lab-01 (systemd): pam_unix(systemd-user:session): session opened for user lab-user(uid=1000) by lab-user(uid=0)
+2026-11-26T22:18:49.812270+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+2026-11-26T22:18:49.812822+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:18:49.923506+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:19:32.099925+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/ufw default deny incoming
+2026-11-26T22:19:32.100578+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:19:32.151106+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:19:48.279855+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/ufw default allow outgoing
+2026-11-26T22:19:48.280640+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:19:48.329429+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:19:58.442440+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/ufw logging oon
+2026-11-26T22:19:58.442572+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:19:58.485145+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:20:12.149178+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/ufw enable
+2026-11-26T22:20:12.150432+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:20:12.724104+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:20:28.918989+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/sbin/ufw status verbose
+2026-11-26T22:20:28.919571+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:20:28.991470+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:21:15.302834+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/ss -tulnp
+2026-11-26T22:21:15.303606+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:21:15.340522+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:22:38.888728+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/systemctl status ssh
+2026-11-26T22:22:38.889340+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:22:38.925071+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:23:56.402455+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/systemctl status ssh.socket
+2026-11-26T22:23:56.403709+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:23:56.423156+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:24:55.393745+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/tail -n 20 /var/log/auth.log
+2026-11-26T22:24:55.394077+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:24:55.409377+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:25:01.680667+00:00 linux-lab-01 CRON[1182]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-26T22:25:01.687724+00:00 linux-lab-01 CRON[1182]: pam_unix(cron:session): session closed for user root
+2026-11-26T22:32:11.863395+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep -i failure /var/log/auth.log
+2026-11-26T22:32:11.869277+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:32:11.873338+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:33:19.298920+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep -c 'failed login' /var/log.auth.log
+2026-11-26T22:33:19.299267+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:33:19.305757+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:35:01.722479+00:00 linux-lab-01 CRON[1202]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-26T22:35:01.729504+00:00 linux-lab-01 CRON[1202]: pam_unix(cron:session): session closed for user root
+2026-11-26T22:36:52.452588+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep -c 'FAILED LOGIN' /var/log/auth.log
+2026-11-26T22:36:52.460928+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:36:52.462795+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:37:45.825774+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep -n 'FAILED LOGIN' /var/log/auth.log
+2026-11-26T22:37:45.827045+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:37:45.837290+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:39:46.388619+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep -c 'login\\[[0-9]*\\]: FAILED LOGIN' /var/log/auth.log
+2026-11-26T22:39:46.389060+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:39:46.392744+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:41:05.340448+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep 'pam_unix(login:session): session opened' /var/log/auth.logcd..
+2026-11-26T22:41:05.341086+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:41:05.348554+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:42:11.377511+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep 'pam_unix(login:session): session opened' /var/log/auth.log
+2026-11-26T22:42:11.384345+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:42:11.389822+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:44:28.815103+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/grep -E 'login\\[[0-9]+\\]: (FAILED LOGIN|pam.unix\\(login:session\\): session opened)' /var/log/auth.log
+2026-11-26T22:44:28.815877+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)
+2026-11-26T22:44:28.822936+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session closed for user root
+2026-11-26T22:45:01.756850+00:00 linux-lab-01 CRON[1233]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+2026-11-26T22:45:01.767079+00:00 linux-lab-01 CRON[1233]: pam_unix(cron:session): session closed for user root
+2026-11-26T22:46:40.739120+00:00 linux-lab-01 sudo:     lab-user : TTY=tty1 ; PWD=/home/lab-user ; USER=root ; COMMAND=/usr/bin/cp /var/log/auth.log /home/lab-user/SOC-Evidence/auth_evidence.log
+2026-11-26T22:46:40.739513+00:00 linux-lab-01 sudo: pam_unix(sudo:session): session opened for user root(uid=0) by lab-user(uid=1000)

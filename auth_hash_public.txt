@@ -1,0 +1,3 @@
+58d189c4787feecf461cb7b76029568be0dbe97e59766090308d48baf1f132b7  auth_evidence_public.log
+
+SHA-256 of sanitized public evidence only. Original evidence and original hash retained separately.
